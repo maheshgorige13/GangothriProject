@@ -1,0 +1,2705 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+    font-family: 'Bosch';
+    src: url('./fonts/BoschRegular.eot');
+    src: url('./fonts/BoschRegular.eot?#iefix') format('embedded-opentype'), url('./fonts/BoschRegular.woff2') format('woff2'), url('./fonts/BoschRegular.woff') format('woff'), url('./fonts/BoschRegular.ttf') format('truetype'), url('./fonts/BoschRegular.svg#BoschRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+html, body, div, span, a, input, select, textarea, table, tbody, tr, th, td, form, ul, li, img, label {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    font-size: 100%;
+}    
+
+.SiteWidth{
+    width: 98%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+/*******************************Global css**************************/
+.AbtSctnHldr, .SctnProjects, .ExpInfo, .PrjctsSctn, .ProdctSctn, .AboutDtls {
+    position: relative;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 1.5s all ease;
+}
+    .AbtSctnHldr.Active, .SctnProjects.Active, .ExpInfo.Active, .PrjctsSctn.Active, .ProdctSctn.Active, .AboutDtls.Active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+h1.Hdr {
+    font: normal normal 200 30px/25px Poppins;
+    text-align: center;
+    text-transform: uppercase;
+    display: block;
+}
+h2.Hdr {
+    font: normal normal 300 24px/0 Poppins;
+    text-align: center;
+    display: block;
+    text-transform: uppercase;   
+    letter-spacing: 0.62px;
+}
+h3.Hdr {
+    letter-spacing: 10.4px;
+    font: normal normal 200 18px/38px Poppins;
+    color: #000000;
+    text-transform: uppercase;
+}
+h4.Hdr {
+    letter-spacing: 0.48px;
+    font: normal normal 300 26px/26px Poppins;
+    color: #333;
+    text-transform: uppercase;
+}
+span.InnrHdr{
+    font-weight: bold;
+}
+div.BtnHldr {
+    text-align: center;
+    display: block;
+    position: relative;
+}
+
+div.BtnHldr a.BtnLnk {
+    text-decoration: underline;
+    font: normal normal 300 14px/23px Poppins;
+    text-transform: uppercase;   
+    display: block;
+    text-underline-offset: 10px;
+    letter-spacing: 2px;
+    position: relative;
+}
+div.BtnHldr a.BtnLnk:hover{
+    color: #0771BE;
+}
+
+div.BtnHldr a.BtnLnk:after {
+    content: url(./images/ArrowRightBlack.png);
+    position: absolute;
+    top: 5%;
+}
+span.BnnrHdr {
+    font-size: 75px;
+    font-family: 'Bosch';
+    text-shadow: 0px 6px 6px #000000;
+    color: #FFFFFF;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 40%;
+    z-index: 99;
+    line-height: 120%;
+}
+/*******************************Global css**************************/
+div.GHeader {
+    height: 60px;
+    padding-top: 5px;
+    box-shadow: 0px 3px 6px #0000005C;   
+    background: #FFFFFF 0% 0% no-repeat padding-box;   
+}
+    div.GHeader.Sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 999;
+        background: rgba(0, 0, 0, 0.8);       
+        height: 60px;
+        -webkit-transition: all 1.3s;
+        -moz-transition: all 1.3s;
+        -ms-transition: all 1.3s;
+        -o-transition: all 1.3s;
+        transition: all 1.3s;
+        opacity: 1;
+        animation-name: fadeInOpacity;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        animation-duration: 0.75s;
+    }
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+div.GHeader div.HeaderCntnt div.LogoHldr, div.GHeader div.HeaderCntnt div.MenuSctnHldr, div.GHeader div.HeaderCntnt div.BttnHldr {
+    display: inline-block;
+    vertical-align: top;
+}
+
+div.GHeader div.HeaderCntnt div.LogoHldr {
+    width: 20%;
+}
+div.GHeader div.HeaderCntnt div.MenuSctnHldr{
+    width: 65%;
+    text-align: center;
+}
+div.GHeader div.HeaderCntnt div.BttnHldr{
+    width: 15%;
+     padding-top: 15px;
+     text-align: right;
+}
+div.GHeader div.HeaderCntnt div.LogoHldr img{
+    padding-top: 10px;
+}
+div.GHeader.Sticky div.HeaderCntnt div.LogoHldr img {
+    width: 140px;
+    padding-top: 15px;
+}
+div.GHeader div.HeaderCntnt div.LogoHldr img.LogoC {
+    display: block;
+}
+div.GHeader div.HeaderCntnt div.LogoHldr img.LogoW{
+    display: none;
+}
+div.GHeader.Sticky div.HeaderCntnt div.LogoHldr img.LogoC {
+    display: none;
+}
+div.GHeader.Sticky div.HeaderCntnt div.LogoHldr img.LogoW{
+    display: block;
+}
+
+    div.GHeader div.HeaderCntnt div.MenuSctnHldr ul.MenuLsts li a.Lnk {
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;    
+        padding-bottom: 24px;
+    }
+    div.GHeader.Sticky div.HeaderCntnt div.MenuSctnHldr ul.MenuLsts li a.Lnk{
+        color: #fff;
+    }
+    div.GHeader div.HeaderCntnt div.MenuSctnHldr ul.MenuLsts li a.Lnk.Active{
+        color: #0771BE;
+    }
+    div.GHeader div.HeaderCntnt div.MenuSctnHldr ul.MenuLsts li a.Lnk:hover {
+        color: #0771BE;
+    }    
+
+    /*************************************hover scroll menu************************************/
+    div.GHeader div.HeaderCntnt div.MenuSctnHldr ul.MenuLsts li {
+        display: inline-block;
+        list-style: outside none none;
+       /* overflow: hidden; remove this completely*/
+        margin: 15px;
+    }
+
+    /*div.GHeader div.HeaderCntnt div.MenuSctnHldr ul.MenuLsts * {
+        box-sizing: border-box;
+        -webkit-transition: all 0.35s ease;
+        transition: all 0.35s ease;
+    }
+
+    div.GHeader div.HeaderCntnt div.MenuSctnHldr ul.MenuLsts li {
+        display: inline-block;
+        list-style: outside none none;        
+        overflow: hidden;
+        margin: 15px;
+    }
+    div.GHeader div.HeaderCntnt div.MenuSctnHldr ul.MenuLsts a.Lnk {
+        padding: 5px 0;        
+        position: relative;
+        display: inline-block;
+        letter-spacing: 0.5px;
+        margin: 0;
+        text-decoration: none;
+    }
+
+    div.GHeader div.HeaderCntnt div.MenuSctnHldr ul.MenuLsts a.Lnk:before,
+    div.GHeader div.HeaderCntnt div.MenuSctnHldr ul.MenuLsts a.Lnk:after {
+        position: absolute;
+        -webkit-transition: all 0.35s ease;
+        transition: all 0.35s ease;
+    }*/
+        /*div.GHeader div.HeaderCntnt div.MenuSctnHldr ul.MenuLsts a.Lnk:before {
+            top: 100%;
+            display: block;
+            height: 3px;
+            width: 100%;
+            content: "";
+            background-color: #0771BE;
+        }*/
+    /*div.GHeader div.HeaderCntnt div.MenuSctnHldr ul.MenuLsts a.Lnk:after {
+        padding: 5px 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        color: #0771BE;
+        content: attr(data-hover);      
+        white-space: nowrap;
+    }
+
+    div.GHeader div.HeaderCntnt div.MenuSctnHldr ul.MenuLsts li:hover a.Lnk,
+    div.GHeader div.HeaderCntnt div.MenuSctnHldr ul.MenuLsts li.Active a.Lnk {
+        transform: translateY(-100%);
+    }*/
+
+    /*************************************hover scroll menu************************************/
+ 
+div.GHeader div.HeaderCntnt div.BttnHldr a.LnkBtn{       
+    padding: 8px 15px;
+    font-size: 14px;
+    background: #0771BE 0% 0% no-repeat padding-box;
+    border-radius: 3px;
+    color: #fff;   
+    text-align: center;
+    letter-spacing: 0.8px;
+}
+    div.GHeader div.HeaderCntnt div.BttnHldr a.LnkBtn:hover {
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        background-color: #0C2F52;
+    }
+
+    div.GHeader div.HeaderCntnt div.MenuSctnHldr ul.MenuLsts li div.Drpdwn {
+        position: relative;
+        display: inline-block;      
+        vertical-align: top;
+    }
+        div.GHeader div.HeaderCntnt div.MenuSctnHldr ul.MenuLsts li div.Drpdwn a.Lnk {
+            -webkit-transition: all 1s;
+            transition: all 1s;
+        }
+        
+        div.GHeader div.HeaderCntnt div.MenuSctnHldr ul.MenuLsts li a.Lnk.OngoingProjects:after {
+            content: url(./images/DropdwnArrw.svg);
+            margin-left: 3px;
+            position: absolute;
+            top: 2px;
+            right: -15px;
+        }
+        div.GHeader.Sticky div.HeaderCntnt div.MenuSctnHldr ul.MenuLsts li a.Lnk.OngoingProjects:after {
+            content: url(./images/DropdwnArrwW.svg);
+        }
+
+        div.GHeader div.HeaderCntnt div.MenuSctnHldr ul.MenuLsts li div.Drpdwn div.DrpdwnCntnt {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+            z-index: 999;
+            text-align: left;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            top: 45px;            
+        }
+
+            div.GHeader div.HeaderCntnt div.MenuSctnHldr ul.MenuLsts li div.Drpdwn div.DrpdwnCntnt a.Link {
+                color: #333;
+                padding: 10px;
+                text-decoration: none;
+                display: block;
+                border-bottom: 1px solid #ddd;
+            }
+            div.GHeader div.HeaderCntnt div.MenuSctnHldr ul.MenuLsts li div.Drpdwn div.DrpdwnCntnt a.Link:last-child{
+                border-bottom: 0;
+            }
+        div.GHeader div.HeaderCntnt div.MenuSctnHldr ul.MenuLsts li div.Drpdwn div.DrpdwnCntnt a.Link:hover{
+            color: #0771BE;           
+        }
+
+        div.GHeader div.HeaderCntnt div.MenuSctnHldr ul.MenuLsts li div.Drpdwn:hover div.DrpdwnCntnt {
+            display: block;           
+        }
+div.SlideshowContainer div.mySlides {
+    display: none;
+}
+
+div.SlideshowContainer div.mySlides img {
+    vertical-align: middle;   
+    height: 100vh;
+    object-fit: cover;
+    position: center;
+}
+
+div.SlideshowContainer {
+    max-width: 1920px;
+    position: relative;
+    margin: auto;
+    width: 100%;
+    overflow: hidden;    
+    height: 100%;
+}
+
+
+.fade {
+    animation-name: fade;
+    animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+    animation-duration: 0.5s;   
+}
+
+@keyframes fade {
+    from {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0.5
+    }
+}
+
+div.FloatingIconsHldr {
+    position: fixed;
+    right: 20px;
+    bottom: 9%;    
+    z-index: 1;
+}
+div.FloatingIconsHldr div.IconsHldr {
+    background-color: #000;
+    width: 60px;
+    height: 50px;
+    border-radius: 6px;
+    text-align: center;   
+     position: relative;
+     /*box-shadow: 5px 4px 20px #999;*/
+}
+    
+    div.FloatingIconsHldr div.IconsHldr.Email {
+        margin-bottom: 10px;
+    }
+    div.FloatingIconsHldr div.IconsHldr.Email:before {
+        content: url(./images/EmailIcon.svg);
+        padding-top: 15px;
+        display: block;
+        cursor: pointer
+    }
+    div.FloatingIconsHldr div.IconsHldr.Phone:before {
+        content: url(./images/PhoneIcon.svg);
+        padding-top: 15px;
+        display: block;
+        cursor: pointer
+    }
+    div.FloatingIconsHldr div.IconsHldr button.PopupBtn, div.FloatingIconsHldr div.IconsHldr a.PopupBtn {
+        display: none;
+        position: absolute;
+        top: 0%;
+        left: -225%;
+        font-size: 14px;
+        font-weight: 500;
+        color: #000;
+        background-color: #fff;
+        padding: 14px 10px;
+        text-transform: uppercase;
+        border: 1px solid#ddd;        
+        cursor: pointer;
+    }
+    div.FloatingIconsHldr div.IconsHldr:hover button.PopupBtn, div.FloatingIconsHldr div.IconsHldr:hover a.PopupBtn {
+        display: block;        
+    }
+div.ModalContainer {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.8);
+}
+div.ModalContainer div.ModalContent {
+    background-color: #ededed;
+    margin: auto; 
+    border-radius: 10px;
+    width: 40%;
+    position: relative;
+}
+
+div.ModalContainer div.ModalContent span.Close { 
+    position: absolute;
+    right: -10px;
+    top: -10px;    
+}
+div.ModalContainer div.ModalContent span.Close:before{
+    content:url(./images/CrossMarkIcon.svg);
+}
+    div.ModalContainer div.ModalContent span.Close:hover, div.ModalContainer div.ModalContent span.Close:focus {      
+        cursor: pointer;
+    }
+    div.ModalContainer div.ModalContent span.PopUpHdr {
+        font: normal normal normal 27px/0px Poppins;
+        letter-spacing: 0.35px;
+        text-align: center;
+        display: block;
+        padding: 40px 0;
+    }
+    div.ModalContainer div.ModalContent div.HdrCntntHldr {
+        background-color: #333;
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+        display: none;
+    }
+    div.ModalContainer div.ModalContent div.HdrCntntHldr span.ContactHldr, div.ModalContainer div.ModalContent div.HdrCntntHldr span.EmailAddress {
+    font: normal normal 500 14px/17px Poppins;
+    color: #fff;
+    display: inline-block;
+    padding: 0 10px;
+    }
+    div.ModalContainer div.ModalContent div.HdrCntntHldr span.ContactHldr.PhoneIcon:before{
+    content:url(./images/PhoneIcon.svg);
+    padding-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    }
+
+    div.ModalContainer div.ModalContent div.HdrCntntHldr span.EmailAddress:before {
+    content: url(./images/EmailIcon.svg);
+    padding-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+            }
+    div.ContactForm {
+        padding: 20px 45px;
+        display: block;
+    }
+        div.ContactForm div.Hldr {
+            display: inline-block;
+            vertical-align: top;
+            box-sizing: border-box;
+            padding: 5px 0;
+            position: relative;
+        } 
+    div.ContactForm div.Hldr.Hlf{
+        width: 49%;
+        margin: 0 0.5%
+    }
+    div.ContactForm div.Hldr.Fll {
+    width: 99%;    
+    }
+    div.ContactForm div.Hldr div.InptHldr {     
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        background-color: #fff;
+        height: 44px;
+        
+        padding: 0;
+        margin: 0;
+        position: relative;
+    }
+        div.ContactForm div.Hldr div.InptHldr.ArrwIcon:after {
+            content: url(./images/DropdwnArrw.svg);
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            z-index: 0;            
+        }
+    input.Input{
+        width: 96%
+    }
+select.Input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    width: 100%;
+    padding: 0 5px;
+    height: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 6;
+    cursor: pointer;
+    outline: none;
+    line-height: 140%;
+}
+input.Input, select.Input {
+    font: normal normal normal 14px/32px Poppins;
+    letter-spacing: 0.17px;
+    padding: 5px 0 5px 10px;
+    z-index: 0;
+    color: #666 !important;
+    margin: 0;
+    background-color: #fff;
+}
+select.Input{
+    width: 100%;
+}
+textarea:focus, input.Input, select.Input:focus {
+    outline: none;
+}
+
+select > option {
+    padding: 5px 0;
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+textarea.TextArea {
+    font: normal normal normal 14px/20px Poppins;
+    letter-spacing: 0.17px;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+    resize: none;
+    color: #666 !important;
+}    
+    div.ContactForm div.BttnHldr{
+        padding: 10px 0 0 5px;
+    }
+    div.ContactForm div.BttnHldr input.Btn {
+    font: normal normal 500 14px/28px Poppins;
+    letter-spacing: 0.17px;
+    margin-right: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    }
+    div.ContactForm div.BttnHldr input.Btn.Submit {
+    padding: 6px 20px;
+    background-color: #0771BE;
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+            
+    }
+        div.ContactForm div.BttnHldr input.Btn.Submit:hover {
+            box-shadow: rgb(14 30 37 / 12%) 0px 2px 4px 0px, rgb(14 30 37 / 32%) 0px 2px 16px 0px;
+            background-color: #0C2F52;
+        }
+
+
+div.ContactUsSctn div.ContactBnnrHldr {
+    background: url("./images/img1.jpg") no-repeat center center;
+    background-size: cover;
+    height: 210px;
+    position: relative;
+}
+
+div.ContactUsSctn div.ContactBnnrHldr div.ContactBnnrTtlSctn {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+div.ContactUsSctn div.ContactBnnrHldr div.ContactBnnrTtlSctn h2.Hdr {
+    font: normal normal 200 34px/47px Poppins;
+    letter-spacing: 1.44px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+div.ContactUsSctn div.ContactBnnrHldr div.ContactBnnrTtlSctn h2.Hdr span.BoldTtl {
+    font-weight: bold;
+    color: #fff;
+}
+div.ContactUsSctn div.Form{
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+div.ContactUsSctn div.ContactUsCntnt {
+    background-color: #f2f2f2;
+    margin: 60px 0;
+}
+div.ContactUsSctn div.ContactUsCntnt div.ContactForm {
+    padding: 0;
+}
+div.ContactUsSctn div.ContactUsCntnt div.Form.LftSctn {
+    padding: 60px;
+}
+div.ContactUsSctn div.ContactUsCntnt div.Form.LftSctn span.PopUpHdr{
+    font: normal normal normal 21px/31px Poppins;
+    letter-spacing: 0.27px;
+    padding: 20px 0 10px 0;
+    display: block;
+    padding-left: 5px;
+}
+
+div.BrandHldr {
+    background: #fff 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    width: 600px;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 73%;
+}
+div.BrandHldr div.BrandType{
+    width: 33.33%;
+    height: 120px;
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+}
+div.BrandHldr div.BrandTypeCntnt{
+    display: none;
+}
+    div.BrandHldr div.BrandType:hover div.BrandTypeCntnt {       
+        background-color: #000;
+        padding: 10px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 180px;
+    }
+    div.BrandHldr div.BrandType.One:hover div.BrandTypeCntnt.One, div.BrandHldr div.BrandType.Two:hover div.BrandTypeCntnt.Two, div.BrandHldr div.BrandType.Three:hover div.BrandTypeCntnt.Three {
+        display: block;
+    }
+    div.BrandHldr div.BrandType.Two a img {
+        padding-top: 10px;
+    }
+    
+    div.BrandHldr div.BrandTypeCntnt span.Txt{
+        color: #fff;
+        font-size: 14px;    
+        line-height: 0;
+        padding: 0;
+    }
+    div.BrandHldr div.BrandType.Two {
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+    div.BrandHldr div.BrandType a img:hover{
+        opacity: 0.6;
+    }
+
+    div.AboutDtlsHldr {       
+        background: url("./images/BlackBg.jpg") no-repeat center center;   
+        background-size: cover;
+        height: 253px;   
+        margin-top: 1px;
+    }
+
+div.AboutDtlsHldr div.AboutDtls {
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    padding-top: 50px;
+}
+    div.AboutDtlsHldr div.AboutDtls div.ImgHldr img{
+        width: 48px;
+        height: 48px;
+    }
+    div.AboutDtlsHldr div.AboutDtls div.ImgHldr img.WorkForce {
+        width: 68px;
+    }
+    div.AboutDtlsHldr div.AboutDtls span.HdrTxt {
+        font-size: 36px;
+        display: block;
+        color: #fff;
+        font-weight: 600;
+        padding: 15px 0 10px 0;
+        line-height: 140%;
+    }
+    div.AboutDtlsHldr div.AboutDtls span.Txt {
+        font-size: 14px;
+        display: block;
+        color: #FCC200;
+        letter-spacing: 0.63px;
+    }
+
+div.ExpInfo {
+    padding: 50px 0 60px 0;
+    display: block;
+}
+    div.ExpInfo div.ExpSctn {       
+        display: inline-block;
+        vertical-align: top;
+    }
+    div.ExpInfo div.ExpSctn.Lft{
+        width: 60%;    
+    }
+    div.ExpInfo div.ExpSctn.Rgt {
+        width: 40%;        
+    }
+    div.ExpInfo div.ExpSctn div.LftExpSctn {
+        width: 40%;
+        display: inline-block;
+        vertical-align: top;
+    }
+    div.ExpInfo div.ExpSctn div.LftExpSctn div.TotlExpSctn {
+        background-color: #0771BE;
+        padding: 40px 10px;
+        display: block;
+        text-align: center;
+        max-width: 250px;       
+    }
+    div.ExpInfo div.ExpSctn div.LftExpSctn div.TotlExpSctn span.Date {        
+        font: normal normal 600 95px/23px Poppins;
+        color: #fff;
+        display: block;        
+        padding: 40px 10px;
+    }
+    div.ExpInfo div.ExpSctn div.LftExpSctn div.TotlExpSctn span.Years{
+        color: #fff;
+        display: block; 
+        font: normal normal 200 46px/34px Poppins;
+        text-transform: uppercase;
+        letter-spacing: 5.75px;
+        padding: 20px 0 10px 0;
+    }
+        div.ExpInfo div.ExpSctn div.LftExpSctn div.TotlExpSctn span.Expce {
+            font: normal normal 200 21px/34px Poppins;
+            letter-spacing: 4.41px;
+            color: #FFFFFF;
+            text-transform: uppercase;
+        }
+    div.ExpInfo div.ExpSctn div.RgtExpSctn {
+        width: 60%;
+        display: inline-block;
+        vertical-align: top;       
+        box-sizing: border-box;
+        padding-left: 20px;
+    }
+        div.ExpInfo div.ExpSctn div.RgtExpSctn span.ExpHdr {
+            font: normal normal 200 18px/38px Poppins;
+            letter-spacing: 10.4px;
+            color: #000000;
+            text-transform: uppercase;
+        }
+        div.ExpInfo div.ExpSctn div.RgtExpSctn span.ExpSubHdr {
+            font: normal normal 200 36px/47px Poppins;
+            color: #000000;
+            text-transform: uppercase;
+            padding: 20px 0 0 0;
+            display: block;
+        }
+        div.ExpInfo div.ExpSctn div.RgtExpSctn span.ExpSubHdrBld {
+            font: normal normal bold 36px/47px Poppins;
+            color: #000000;
+            text-transform: uppercase;
+            display: block;
+        }
+        div.ExpInfo div.ExpSctn.Rgt span.Txt {
+            font: normal normal 300 14px/26px Poppins;          
+            display: block;       
+            text-align:justify;
+            color: #000;
+        }
+        div.ExpInfo div.ExpSctn.Rgt div.BtnHldr{           
+            padding-top: 10px;
+            text-align: left;
+        }
+        div.AboutCompany {
+            background-color: #F4F9FD;
+            padding: 60px 0;
+        }
+        div.AboutCompany h1.Hdr {
+            transition: none;
+        }
+    div.AboutCompany div.AbtSctnHldr {       
+        display: inline-block;
+        vertical-align: top;
+    }    
+    div.AboutCompany div.SctnRight img{
+        width: 100%;
+        height: 300px;
+        object-fit: contain;
+        padding-top: 10px;
+    }
+    div.AboutCompany div.AbtSctnHldr div.AbtComSctn {
+        width: 33.33%;
+        display: inline-block;
+        vertical-align: top;
+        padding: 30px 0;
+        position: relative;
+    }
+        div.AboutCompany div.AbtSctnHldr div.AbtComSctn div.AbtComCntnt {            
+            position: relative;
+        }
+        div.AboutCompany div.AbtSctnHldr div.AbtComSctn div.AbtComCntnt span.TtlHldrSctn {
+            display: inline-block;
+            vertical-align: top;
+            padding: 0 0 0 60px;
+        }
+            div.AboutCompany div.AbtSctnHldr div.AbtComSctn div.AbtComCntnt:before {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            div.AboutCompany div.AbtSctnHldr div.AbtComSctn div.AbtComCntnt.Agility:before {
+                content: url(./images/AgilityIcon.svg);                
+            }
+            div.AboutCompany div.AbtSctnHldr div.AbtComSctn div.AbtComCntnt.Resourceful:before {
+                content: url(./images/ResourcefulIcon.svg);
+            }
+            div.AboutCompany div.AbtSctnHldr div.AbtComSctn div.AbtComCntnt.Integrity:before {
+                content: url(./images/IntegrityIcon.svg);
+            }
+            div.AboutCompany div.AbtSctnHldr div.AbtComSctn div.AbtComCntnt.Strategy:before {
+                content: url(./images/StrategyIcon.svg);
+            }
+            div.AboutCompany div.AbtSctnHldr div.AbtComSctn div.AbtComCntnt.Excellence:before {
+                content: url(./images/ExcellenceIcon.svg);
+            }
+            div.AboutCompany div.AbtSctnHldr div.AbtComSctn div.AbtComCntnt.Empathy:before {
+                content: url(./images/EmpathyIcon.svg);
+            }
+    div.AboutCompany div.AbtSctnHldr div.AbtComSctn div.AbtComCntnt span.SubHdrTtl {
+        display: block;
+        font: normal normal 600 14px/25px Poppins;
+        color: #0771BE;
+        text-transform: uppercase;
+    }
+    div.AboutCompany div.AbtSctnHldr div.AbtComSctn div.AbtComCntnt span.Txt {
+        font: normal normal normal 14px/20px Poppins;       
+    }
+div.UpComingProjects {
+    background-color: #0f5588;
+    padding: 50px 0 80px 0;
+}
+div.UpComingProjects div.SctnProjects {
+    width: 33.33%;
+    display: inline-block;
+    vertical-align: top;
+}
+div.UpComingProjects h1.Hdr{
+    padding-bottom: 15px;
+    color: #fff;
+    transition: none;
+}
+div.UpComingProjects div.SctnProjects div.ProjectInfo{
+    padding: 0 10px;
+    box-sizing: border-box;
+    min-height: 320px;   
+}
+    div.UpComingProjects div.SctnProjects div.ProjectInfo img {
+        width: 100%;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+    div.UpComingProjects div.SctnProjects div.ProjectInfo div.ProjectCntnt {
+        background-color: #fff;
+        padding: 30px 10px;
+        margin-top: -10px;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+div.UpComingProjects div.SctnProjects div.ProjectInfo div.ProjectCntnt h2.Hdr{  
+    padding: 0;
+    transition: none;
+}      
+    
+div.UpComingProjects div.SctnProjects div.ProjectInfo div.ProjectCntnt span.Txt {
+    font: normal normal 300 14px/23px Poppins;
+    text-align: center;
+    display: block;
+}
+div.UpComingProjects div.SctnProjects div.ProjectInfo div.ProjectCntnt div.BtnHldr{
+    padding: 30px 0 0 0;
+}
+    div.UpComingProjects div.SctnProjects div.ProjectInfo div.ProjectCntnt div.BtnHldr a.BtnLnk{
+        text-decoration: none;
+    }
+
+    div.OurProjects {
+        padding: 60px 0;
+    }
+    div.OurProjects div.PrjctsSctn {
+        width: 50%;
+        display: inline-block;
+        vertical-align: top;
+    }
+    div.OurProjects div.PrjctsSctn h3.Hdr {
+        line-height: 0;
+        transition: none;
+    }
+        div.OurProjects div.PrjctsSctn span.PrjctsHdrTtl {
+            font: normal normal 200 36px/47px Poppins;
+            color: #000000;
+            text-transform: uppercase;
+            padding-top: 20px;
+            display: block;
+        }
+        div.OurProjects div.PrjctsSctn span.PrjctsSubHdrTtl {
+            font: normal normal bold 36px/47px Poppins;
+            color: #000000;
+            text-transform: uppercase;
+            display: block;
+            padding-bottom: 20px;
+        }
+        div.OurProjects div.PrjctsSctn span.Txt {
+            font: normal normal normal 300 14px/26px Poppins;
+            display: block;
+            padding-right: 150px;
+            box-sizing: border-box;
+        }
+            div.OurProjects div.PrjctsSctn div.BtnHldr {
+                text-align: left;
+                padding: 20px 0 0 0;
+            }
+
+div.TestimonialSctn {
+    background-color: #F4F9FD;
+    padding: 60px 0 100px 0;
+}
+    div.TestimonialSctn h3.Hdr {     
+        text-align: center;
+        display: block;
+    }
+    div.TestimonialSctn div.TestimonialCntnt span.Txt {
+        font: normal normal normal 14px/26px Poppins;
+        display: block;
+        width: 640px;
+        margin: 0 auto;
+        padding: 20px 0;
+    }
+    div.TestimonialSctn div.TestimonialCntnt div.ProfileDtls{      
+        text-align: center;
+        display: block;
+    }
+        div.TestimonialSctn div.TestimonialCntnt div.ProfileDtls div.ImgHldrSctn, div.TestimonialSctn div.TestimonialCntnt div.ProfileInfo {
+            display: inline-block;
+            vertical-align: top;
+        }
+            div.TestimonialSctn div.TestimonialCntnt div.ProfileInfo{
+                padding: 10px 0 0 20px;
+                box-sizing: border-box;
+                text-align: left;
+            }
+            div.TestimonialSctn div.TestimonialCntnt div.ProfileInfo span.ProfileName {
+                font: normal normal normal 16px/22px Poppins;
+                text-transform: uppercase;
+                display: block;
+                letter-spacing: 0.8px;
+            }
+                div.TestimonialSctn div.TestimonialCntnt div.ProfileInfo span.ProfileRole {
+                    font: normal normal normal 12px/22px Poppins;
+                    display: block;
+                    letter-spacing: 0.8px;
+                }
+            div.OtherProducts {
+                padding: 60px 0;
+            }
+div.OtherProducts div.ProdctSctn {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+}
+div.OtherProducts div.ProdctSctn.Rgt img{
+    width: 100%;
+}
+    div.OtherProducts div.ProdctSctn span.ProdctMainHdr {
+        font: normal normal 200 18px/38px Poppins;
+        letter-spacing: 13.5px;
+        color: #000000;
+        text-transform: uppercase;
+        display: block;
+    }
+    div.OtherProducts div.ProdctSctn span.ProdctCompName {
+        font: normal normal 200 26px/41px Poppins;
+        text-transform: uppercase;
+        display: block;
+        padding-top: 20px;
+    }
+    div.OtherProducts div.ProdctSctn span.ProdctSubHdr {
+        font: normal normal bold 26px/41px Poppins;
+        text-transform: uppercase;
+        display: block;
+    }
+    div.OtherProducts div.ProdctSctn div.BtnHldr{
+        text-align: left;
+        padding: 20px 0;
+    }
+    div.GFooter div.GTopFtr {
+        padding: 20px;
+        text-align: center;
+        display: block;
+        background-color: #0771BE;
+        /*border-bottom: 1px solid #0771BE;*/
+        border-bottom: 1px solid #005898;
+    }
+    div.GFooter div.GTopFtr span.FtrInnrTxt {
+        font-weight: 200;
+        font-size: 21px;
+        color: #fff;
+    }
+        div.GFooter div.GTopFtr span.FtrInnrTxt.Mbl{
+            display: none;
+        }
+        div.GFooter div.GTopFtr a.Lnk, div.GFooter div.GTopFtr span.Txt {
+            color: #fff;
+            font-weight: 200;
+            letter-spacing: 0.48px;
+            padding: 0 5px;
+            display: inline-block;
+        }
+div.GFooter div.GMdlFtr {
+    background-color: #0268B2;
+}
+div.GFooter div.GMdlFtr div.LftMdlFtr, div.GFooter div.GMdlFtr div.RgtMdlFtr {
+    display: inline-block;
+    vertical-align: top;
+    padding: 40px 0;
+    box-sizing: border-box;
+}
+div.GFooter div.GMdlFtr div.LftMdlFtr {    
+    width: 30%;      
+}
+    div.GFooter div.GMdlFtr div.LftMdlFtr span.Txt {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 200;
+        letter-spacing: 0.8px;
+    }
+div.GFooter div.GMdlFtr div.LftMdlFtr div.MediaIcons{
+    padding-top: 20px;
+    display: block;
+}
+div.GFooter div.GMdlFtr div.LftMdlFtr div.MediaIcons a.Lnk {       
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    padding: 0 10px;
+}
+div.GFooter div.GMdlFtr div.LftMdlFtr div.MediaIcons a.Lnk.FB {
+    content: url(./images/FB-Icon.svg);        
+}
+    div.GFooter div.GMdlFtr div.LftMdlFtr div.MediaIcons a.Lnk.TW {
+        content: url(./images/TW-Icon.svg);
+    }
+    div.GFooter div.GMdlFtr div.LftMdlFtr div.MediaIcons a.Lnk.INS {
+        content: url(./images/inst-Icon.svg);
+    }
+    div.GFooter div.GMdlFtr div.RgtMdlFtr {
+        width: 70%;
+        /*background-color: #0771BE;*/
+    }
+div.GFooter div.GMdlFtr div.RgtMdlFtr div.FtrSctn{
+    width: 33.33%;
+    display: inline-block;
+    vertical-align: top;
+}
+div.GFooter div.GMdlFtr div.RgtMdlFtr span.FtrHdr {
+    font: normal normal 600 14px Poppins;
+    letter-spacing: 0.8px;
+    color: #FFFFFF;
+    display: block;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+div.GFooter div.GMdlFtr div.RgtMdlFtr a.Lnk{
+    font: normal normal 200 14px Poppins;
+    letter-spacing: 0.8px;
+    color: #FFFFFF;
+    display: block;
+    line-height: 200%;
+}
+    div.GFooter div.GMdlFtr div.RgtMdlFtr a.Lnk:hover {
+        color: #000;       
+    }
+div.GBttmFtr {
+    background-color: #0C2F52;
+    padding: 20px 0;    
+}
+div.GBttmFtr div.BttmSctn {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+}
+div.GBttmFtr div.BttmSctn span.FtrTxt, div.GBttmFtr div.BttmSctn a.Lnk {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 200;
+    letter-spacing: 0.8px;
+}
+div.GBttmFtr div.BttmSctn a.Lnk{
+    padding: 0 10px;
+}
+div.GBttmFtr div.BttmSctn.Rgt {
+    text-align: right;
+    color: #fff;
+}
+div.GHeader div.HeaderCntnt.Mbl{
+    display: none;
+}
+
+.bx-wrapper {
+    box-shadow: none !important;
+    border: none !important;
+    background: transparent !important;
+    margin: 0 auto !important;
+}
+    .bx-wrapper .bx-prev {
+        background: url(./images/LeftArrow.png) no-repeat center center  !important;        
+    }
+    .bx-wrapper .bx-next {
+        background: url(./images/RightArrow.png) no-repeat center center !important;
+        right: 0 !important;
+    }
+    .bx-wrapper .bx-controls-direction a {
+        top: 0 !important;
+        /*background-color: #0771BE !important;*/
+        height: 48px !important;
+        width: 48px !important;
+        margin-top: 0 !important;
+        background-color: #000 !important;
+        z-index: 99 !important
+    }
+    .bx-wrapper .bx-prev {
+        right: 50px !important;
+        left: unset !important;        
+    }
+    
+    .bx-wrapper .bx-pager.bx-default-pager a {
+        background: transparent !important;
+        border: 1px solid #0771BE !important;
+        width: 10px !important;
+        height: 10px !important;
+        -moz-border-radius: 5px !important;
+        -webkit-border-radius: 5px !important;
+        border-radius: 6px !important;
+    }
+        .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {
+            background-color: #0771BE !important;            
+        }
+div.PrjctsSctn .bx-wrapper .bx-pager {
+    display: none !important;
+}
+/*************************Completed Projects css*/
+
+div.ProjectList div.ProjectBnnrHldr {
+    display: block;
+    background: url("./images/CompletedProjectBnnrImg.jpg") no-repeat center center;
+    background-size: cover;
+    height: 160px;
+}
+div.ProjectList div.ProjectBnnrHldr span.BnnrTtl {
+    font: normal normal 200 30px/47px Poppins;
+    letter-spacing: 0.75px;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    color: #fff;
+    padding: 60px 0 0 0;
+}
+div.ProjectList div.ProjectBnnrHldr span.BnnrTtl span.BoldTtl{
+    color: #fff;
+    font-weight: bold;
+}
+div.ProjectList div.ProjectListItems {
+    padding: 40px 0;
+}
+div.ProjectList div.ProjectListItems.FirstItem {
+    padding-top: 0;
+}
+div.ProjectList div.ProjectListItems.BgColor{
+    background-color: #F4F9FD;
+}
+div.ProjectList div.ProjectListItems div.ProjectList {  
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+div.ProjectList div.ProjectListItems div.ProjectList.Lft{
+    width: 35%;
+}
+div.ProjectList div.ProjectListItems div.ProjectList.Lft img {
+    border-radius: 9px;
+}
+div.ProjectList div.ProjectListItems div.ProjectList.Rgt{
+    width: 65%;
+    padding-left: 20px;
+}
+div.ProjectList div.ProjectListItems div.ProjectList.Lft img{
+    width: 100%;
+}
+div.ProjectList div.ProjectListItems div.ProjectList.Rgt span.Ttl{
+    font: normal normal normal 23px/24px Poppins;
+    letter-spacing: 0.3px;   
+    display: block;
+    margin-bottom: 12px;
+}
+div.ProjectList div.ProjectListItems div.ProjectList.Rgt span.SubTtl {
+    font: normal normal bold 14px/21px Poppins;
+    letter-spacing: 0.18px;
+    display: block;
+    line-height: 180%;
+}
+div.ProjectList div.ProjectListItems div.ProjectList.Rgt span.SubTtl span.Normal{
+    font-weight: normal;
+}
+div.ProjectList div.ProjectListItems div.ProjectList.Rgt span.Txt{
+    font: normal normal normal 14px/21px Poppins;
+    letter-spacing: 0.18px;
+    display: block;
+}
+div.ProjectList div.ProjectListItems div.ProjectList.Rgt span.Txt.Dtls{
+    padding-top: 15px;
+}
+/*************************Completed Projects css****************************************************/
+/*************************Sights List css**********************************************************/
+div.SightLocListHldr {
+    background-color: #F3F3F3;
+    padding: 50px 0;
+}
+div.SightLocListHldr div.SightLocList div.SightList {
+    width: 31.33%;
+    margin: 0 1% 20px 1%;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding: 60px;
+    box-shadow: 0px 2px 3px #00000042;
+    border-radius: 9px;
+    background-color: #FFFFFF;
+    min-height: 400px;
+}
+    div.SightLocListHldr div.SightLocList div.SightList.NoBg {
+        box-shadow: none;
+        background-color: transparent; 
+        padding : 80px 70px 70px 0;
+    }
+    div.SightLocListHldr div.SightLocList div.SightList.BtmAlgnCard{
+        margin-top: 80px;
+    }
+    div.SightLocListHldr div.SightLocList div.SightList.TopAlgnCard {
+        margin-top: -60px;
+    }    
+    div.SightLocListHldr div.SightLocList div.SightList span.SightTypeTtl {
+        text-transform: uppercase;
+        font: normal normal 200 36px/47px Poppins;
+        display: block;
+    }
+        div.SightLocListHldr div.SightLocList div.SightList span.SightTypeTtl span.BoldTtl {
+            font: normal normal bold 36px/47px Poppins;
+            display: block;
+        }
+        div.SightLocListHldr div.SightLocList div.SightList span.Txt{
+            font: normal normal normal 14px/26px Poppins;
+            display: block;
+        }
+    div.SightLocListHldr div.SightLocList div.SightList span.SightTtl {
+        font: normal normal normal 15px/30px Poppins;
+        letter-spacing: 0.34px;
+        display: block;
+        text-align: center;
+    }
+    div.SightLocListHldr div.SightLocList div.SightList span.SightName {
+        text-align: center;
+        font: normal normal 500 21px/30px Poppins;
+        letter-spacing: 0.48px;
+        display: block;
+    }
+    div.SightLocListHldr div.SightLocList div.SightList span.SightInfoTxt {
+        font: normal normal normal 14px/20px Poppins;
+        letter-spacing: 0.17px;
+        padding: 15px 0px;
+        display: block;
+    }
+    div.OngoingProjects div.OngoingProjectBnnr {      
+        height: 600px;
+        position: relative;
+    }
+    div.OngoingProjects div.OngoingProjectBnnr.Tribhuja {
+        background: url(./images/SliderImg2.jpg) no-repeat center center;
+        background-size: cover;
+    }
+    div.OngoingProjects div.OngoingProjectBnnr.PrithviTowers {
+        background: url(./images/PrithviTowersImg.jpg) no-repeat center center;
+        background-size: cover;
+    }
+    div.OngoingProjects div.OngoingProjectBnnr.OpusGreen {
+        background: url(./images/OpusGreenImg.jpg) no-repeat center center;
+        background-size: cover;
+    }
+    div.OngoingProjects div.OngoingProjectBnnr div.BnnrCntnt {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+    }
+    div.OngoingProjects div.OngoingProjectBnnr div.BnnrCntnt span.BnnrTtl {
+        font: normal normal 300 32px/48px Poppins;            
+        color: #FFFFFF;
+        text-shadow: 0px 2px 6px #000000;
+        display: block;
+        text-transform: uppercase;
+    }
+    div.OngoingProjects div.OngoingProjectBnnr div.BnnrCntnt span.BnnrSubTtl {
+        font: normal normal 300 22px/33px Poppins;
+        letter-spacing: 0.51px;
+        color: #FFFFFF;
+        text-shadow: 0px 2px 6px #000000;
+    }
+div.OngoingProjects div.OptnsHldr div.Optns{
+    text-align: right;
+    display: block;
+    padding: 20px 0;
+}
+div.OngoingProjects div.OptnsHldr div.Optns span.Txt {
+    font: normal normal normal 14px/21px Poppins;
+    letter-spacing: 0.18px;
+    color: #000000;  
+    display: inline-block;
+    vertical-align: top;
+}
+div.OngoingProjects div.OptnsHldr div.Optns span.Txt:before{
+    padding-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+div.OngoingProjects div.OptnsHldr div.Optns span.Txt.Download:before{
+    content: url(./images/DownloadIcon.svg);    
+}
+div.OngoingProjects div.OptnsHldr div.Optns span.Txt.Availability {
+     padding: 0 0 0 40px;
+}
+div.OngoingProjects div.OptnsHldr div.Optns span.Txt.Availability:before {
+    content: url(./images/AvailabilityIcon.svg);
+}
+div.OngoingProjects div.OngoingProjectsHldr {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+div.OngoingProjects div.OngoingProjectsHldr div.OngoingCntntHldr {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+div.OngoingProjects div.OngoingProjectsHldr div.OngoingCntntHldr.Lft{
+    padding-right: 60px;
+}
+div.OngoingProjects div.OngoingProjectsHldr div.OngoingCntnt{
+    padding: 60px 0 30px 0;
+}
+    div.OngoingProjects div.OngoingProjectsHldr div.OngoingCntnt h1.Hdr {
+        text-align: left;
+        font: normal normal 300 30px/34px Poppins;
+    }
+div.OngoingProjects div.OngoingProjectsHldr div.OngoingCntnt h1 span.HdrTxt {   
+    display: block;
+    font: normal normal bold 30px/43px Poppins;
+}
+div.OngoingProjects div.OngoingProjectsHldr div.OngoingCntnt span.Txt{
+    font: normal normal normal 14px/26px Poppins;
+    letter-spacing: 0.21px;
+    color: #333333;
+}
+    div.OngoingProjects div.OngoingProjectsHldr div.OngoingCntnt div.HeightHldr{
+        padding-top: 40px;
+        display: block;
+    }
+
+    div.OngoingProjects div.OngoingProjectsHldr div.OngoingCntnt div.HeightHldr span.HeightTtl {
+        font: normal normal normal 14px/20px Poppins;
+        letter-spacing: 0.3px;
+        color: #000000;
+        text-transform: uppercase;
+        text-decoration: underline;
+        text-underline-offset: 5px;
+        display: block;
+    }
+ul.IconsLstHldr {
+    padding: 20px 0;
+}
+ul.IconsLstHldr li.Txt {
+    list-style-type: none;
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;       
+    font: normal normal normal 14px/40px Poppins;
+}
+ul.IconsLstHldr li:before{
+    display: inline-block;
+    vertical-align: top;        
+    padding: 5px 10px 0 0;
+}
+ul.IconsLstHldr li.Tower:before {
+        content: url(./images/IconTowers.svg);
+    }
+ul.IconsLstHldr li.Plots:before {
+        content: url(./images/IconPlots.svg);
+    }
+ul.IconsLstHldr li.Acres:before {
+        content: url(./images/IconAcres.svg);
+    }
+ul.IconsLstHldr li.Parking:before {
+        content: url(./images/IconParking.svg);
+    }
+ul.IconsLstHldr li.Units:before {
+        content: url(./images/IconUnits.svg);
+    }
+ul.IconsLstHldr li.ClubHouse:before {
+        content: url(./images/IconClubHouse.svg);
+    }
+ul.IconsLstHldr li.Floors:before {
+        content: url(./images/IconFloors.svg);
+    }
+ul.IconsLstHldr li.Space:before {
+        content: url(./images/IconSpace.svg);
+    }
+    div.OngoingProjects div.OngoingProjectsHldr div.OngoingCntntHldr.Rgt {
+        background-color: #f5f5f5;
+        padding: 60px;
+        min-height: 680px;
+    }
+    div.OngoingProjects div.OngoingProjectsHldr div.TabsHldr {
+        overflow: hidden;        
+        max-width: 410px;
+    }
+        div.OngoingProjects div.OngoingProjectsHldr div.TabsHldr button {
+            background-color: inherit;
+            padding: 10px 40px;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: 0.3s;
+            font: normal normal normal 14px/21px Poppins;
+            letter-spacing: 0.32px;
+            color: #555555;
+            border-bottom: 1px solid #000;
+        }
+    div.OngoingProjects div.OngoingProjectsHldr div.TabsHldr button:hover {      
+        color: #0771BE;
+    }
+    div.OngoingProjects div.OngoingProjectsHldr div.TabsHldr button.Active {
+        color: #000;
+    }
+    div.OngoingProjects div.OngoingProjectsHldr div.TabsHldr button.FactSheet{
+        padding-left: 0;
+    }
+    div.OngoingProjects div.OngoingProjectsHldr div.TabsHldr button.Partner {
+        text-align: right;
+        padding-right: 0;
+    }
+    div.OngoingProjects div.OngoingProjectsHldr div.TabCntnt {
+        display: none;      
+        margin-top: 25px;
+    }
+    div.OngoingProjects div.OngoingProjectsHldr div.TabCntnt h1.Hdr{
+        text-align: left;       
+    }
+    div.OngoingProjects div.OngoingProjectsHldr div.TabCntnt div.Cntnt {
+        padding: 10px 0;
+        display: block;
+    }
+        div.OngoingProjects div.OngoingProjectsHldr div.TabCntnt div.Cntnt p.Ttl {
+            font: normal normal normal 11px/0 Poppins;
+            letter-spacing: 0.25px;
+            color: #555555;
+            text-transform: uppercase;
+        }
+        div.OngoingProjects div.OngoingProjectsHldr div.TabCntnt div.Cntnt span.Txt {
+            font: normal normal normal 14px/23px Poppins;
+            letter-spacing: 0.32px;
+            color: #000;
+        }
+        div.OngoingProjects div.AmenitiesHldr{
+            background-color: #f5f5f5;
+            padding: 60px 0;
+            border-bottom: 1px solid #000;
+        }
+
+       div.OngoingProjects div.AmenitiesHldr ul.IconsLstHldr li.Txt{
+           width: 25%;
+           padding: 10px 0;
+           font-size: 14px;
+       }
+        ul.IconsLstHldr li.Indoor:before {
+            content: url(./images/IndoorIcon.svg);
+        }
+
+        ul.IconsLstHldr li.Outdoor:before {
+            content: url(./images/OutdoorIcon.svg);
+        }
+
+        ul.IconsLstHldr li.Security:before {
+            content: url(./images/SecurityIcon.svg);
+        }
+
+        ul.IconsLstHldr li.Padel:before {
+            content: url(./images/PadelIcon.svg);
+        }
+
+        ul.IconsLstHldr li.Garden:before {
+            content: url(./images/GardenIcon.svg);
+        }
+
+        ul.IconsLstHldr li.KidsClub:before {
+            content: url(./images/KidsClubIcon.svg);
+        }
+
+        ul.IconsLstHldr li.Gym:before {
+            content: url(./images/GymIcon.svg);
+        }
+
+        ul.IconsLstHldr li.Spa:before {
+            content: url(./images/SpaIcon.svg);
+        }
+        ul.IconsLstHldr li.Storage:before {
+            content: url(./images/StorageIcon.svg);
+        }
+        ul.IconsLstHldr li.WorkSpace:before {
+            content: url(./images/WorkSpaceIcon.svg);
+        }
+        ul.IconsLstHldr li.Bicycle:before {
+            content: url(./images/BicycleIcon.svg);
+        }
+        ul.IconsLstHldr li.Services:before {
+            content: url(./images/ServicesIcon.svg);
+        }
+        div.MapSection {
+            background: url("./images/MapBg.jpg") no-repeat center center;
+            background-size: cover;           
+        }
+        div.MapSection ul.IconsLstHldr.MapLst li.Txt{
+            font: normal normal normal 14px/20px Poppins;
+            letter-spacing: 0.37px;
+            color: #000000;
+            width: 100%;
+            vertical-align: middle;
+        }
+        div.MapSection h1.Hdr {
+            text-transform:none;
+            text-align: left;
+            line-height: 140%;
+            color: #000;
+            margin: 0;
+            padding-top: 60px;
+        }
+        div.MapSection h1.Hdr span.BoldTtl {
+            font-weight: bold;
+            display: block;
+        }
+            div.MapSection ul.IconsLstHldr.MapLst{
+                padding: 20px 0 60px 0;
+            }
+            div.MapSection ul.IconsLstHldr.MapLst li{
+                list-style-type: none;
+            }
+            ul.IconsLstHldr.MapLst li:before {
+                vertical-align: middle;
+            }
+            ul.IconsLstHldr.MapLst li span.Txt{
+                width: 95%;
+                display: inline-block;
+                vertical-align: top;    
+                padding-top: 5px;
+            }
+            ul.IconsLstHldr.MapLst li span.Icon{
+                width: 5%;
+                display: inline-block;
+                vertical-align: top;
+            }
+        ul.IconsLstHldr.MapLst li span.Education:before {
+            content: url(./images/EducInsIcon.svg);
+        }
+        ul.IconsLstHldr.MapLst li span.Finance:before {
+            content: url(./images/FinanceIcon.svg);
+        }
+        ul.IconsLstHldr.MapLst li span.Entertainment:before {
+            content: url(./images/EntertainmentIcon.svg);
+        }
+        ul.IconsLstHldr.MapLst li span.Medical:before {
+            content: url(./images/MedicalIcon.svg);
+        }
+        ul.IconsLstHldr.MapLst li span.Shopping:before {
+            content: url(./images/ShoppingIcon.svg);
+        }
+        ul.IconsLstHldr.MapLst li span.Hospitality:before {
+            content: url(./images/HospitalityIcon.svg);
+        }
+        div.OngoingProjects div.ContactSection{
+            background-color: #202020;
+            padding: 60px 0;
+        }
+        div.OngoingProjects div.ContactSection h1.Hdr{
+            color: #fff;
+        }
+        div.OngoingProjects div.ContactSection div.FormHldr{
+            text-align: center;
+            display: block;
+            width: 30%;
+            margin: 0 auto;
+        }
+
+        div.OngoingProjects div.ContactSection div.FormHldr div.Name{
+            border-bottom: 1px solid #707070;
+            text-align: left;
+            padding: 10px 0;
+        }
+            div.OngoingProjects div.ContactSection div.FormHldr div.Name input.Input {
+                background-color: transparent;
+                color: #fff;
+                font: normal normal 300 14px/18px Poppins;
+                letter-spacing: 0.32px;
+                text-transform: uppercase;
+            }
+            div.OngoingProjects div.ContactSection div.FormHldr div.BttnHldr{
+                padding: 20px 0 10px 0;
+                display: block;
+                margin: 0 auto;
+            }
+            div.OngoingProjects div.ContactSection div.FormHldr div.BttnHldr input.Btn{
+                background-color: #fff;
+                padding: 6px 30px;
+                text-transform: uppercase;
+                font: normal normal normal 14px/21px Poppins;
+                letter-spacing: 1.75px;
+                color: #000000;
+                border-radius: 3px;
+                display: block;
+                margin: 0 auto;
+            }
+                div.OngoingProjects div.ContactSection div.FormHldr div.BttnHldr input.Btn:hover {
+                    box-shadow: rgb(255 255 255 / 50%) 0px 5px 29px 0px;
+                }
+
+            div.SaleSection{
+                padding: 60px 0;
+                display: block;
+            }
+            div.SaleSection h1.Hdr {
+                padding-bottom: 20px;
+            }
+            
+            div.SaleSection table.SalesTable{
+                border-collapse: collapse;
+                width: 100%;
+                border: 1px solid #ddd;
+            }
+            div.SaleSection table.SalesTable tr:hover {
+                background-color: #fafafa;
+            }
+                div.SaleSection table.SalesTable tr th {
+                    padding: 12px 0;
+                    text-align: left;
+                    background-color: #f2f2f2;                    
+                }                
+                div.SaleSection table.SalesTable tr th, div.SaleSection table.SalesTable tr td {
+                    border: 1px solid #c6c6c6;
+                    border-right: 0;
+                    border-left: 0;
+                    padding: 15px 12px;
+                    font: normal normal normal 14px/21px Poppins;
+                    letter-spacing: 0.32px;
+                    color: #333333;
+                    text-transform: uppercase;
+                }
+                div.SaleSection table.SalesTable tr td a.Lnk{
+                    text-decoration: underline;
+                    text-underline-offset: 5px;
+                }
+                    div.SaleSection table.SalesTable tr td span.Block {
+                        border: 1px solid #555555;
+                        border-radius: 3px;
+                        padding: 2px;
+                        width: 20px;
+                        display: block;
+                        text-align: center;
+                    }
+                    div.SaleSection table.SalesTable tr td.View:before {
+                        content: url(./images/IconTowers.svg);
+                        display: inline-block;
+                        vertical-align: middle;
+                        padding-right: 5px;
+                    }
+                div.SaleSection span.Txt {
+                    font: normal normal normal 14px/21px Poppins;
+                    letter-spacing: 0.32px;
+                    color: #333333;
+                    display: block;
+                    padding: 10px 0;
+                }
+                div.SaleSection div.BtnHldr{                   
+                    padding: 20px 0;
+                }
+                div.SaleSection div.BtnHldr a.LnkBtn {
+                    font: normal normal normal 14px/21px Poppins;
+                    letter-spacing: 1.75px;
+                    color: #000000;
+                    text-transform: uppercase;
+                    background: #FFFFFF 0% 0% no-repeat padding-box;
+                    border: 1px solid #707070;
+                    padding: 10px 15px;
+                    border-radius: 3px;
+                }
+                div.SaleSection div.BtnHldr a.LnkBtn:hover{
+                    border: 1px solid #0771BE;
+                    color: #0771BE;
+                    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                }
+
+div.AbtSctn div.AbtBnnrHldr {
+    background: url("./images/AbtUsBnnrImg.jpg") no-repeat center center;
+    background-size: cover;
+    height: 210px;
+    position: relative;
+}
+    div.AbtSctn div.AbtBnnrHldr div.AbtBnnrTtlSctn {
+        position: absolute;
+        top: 30%;
+        left: 0;
+        right: 0;
+        text-align: center;
+
+    }
+    div.AbtSctn div.AbtBnnrHldr div.AbtBnnrTtlSctn h2.Hdr {
+        font: normal normal 200 34px/47px Poppins;
+        letter-spacing: 1.44px;       
+        text-transform: uppercase;
+        color: #fff;
+    }
+        div.AbtSctn div.AbtBnnrHldr div.AbtBnnrTtlSctn h2.Hdr span.BoldTtl {
+            font-weight: bold;
+            color: #fff;
+        }
+div.AbtSctn div.CraftingHomes div.CraftHomesCntnt h1.Hdr {
+    text-align: left;
+    font: normal normal 200 26px/36px Poppins;
+    margin: 0;
+    padding-bottom: 20px;
+}
+div.AbtSctn div.CraftingHomes div.CraftHomesCntnt h1.Hdr span.BoldTtl {
+    font: normal normal bold 26px/36px Poppins;
+    letter-spacing: 0.65px;
+    text-transform: uppercase;
+    display: block;    
+}
+div.AbtSctn div.CraftingHomes div.CraftHomesCntnt {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding: 60px 0;
+}
+div.AbtSctn div.CraftingHomes div.CraftHomesCntnt.Rgt {
+    text-align: center;
+}
+div.AbtSctn div.CraftingHomes div.CraftHomesCntnt span.Txt {
+    font: normal normal normal 14px/24px Poppins;
+    letter-spacing: 0.18px;
+    display: block;
+    padding: 10px 0;
+}
+div.AbtSctn div.CraftingHomes div.ProjectNoSctn {
+    padding: 20px 0;
+    margin: 0px 0 60px 0;
+    background-color: #0771BE;
+    border-radius: 5px;
+    width: 50%;
+    display: inline-block;
+}
+    div.AbtSctn div.CraftingHomes div.ProjectNoSctn div.Sctn {
+        width: 31.33%;
+        display: inline-block;
+        vertical-align: top;
+        box-sizing: border-box;
+        margin: 0 1%;
+    }
+        div.AbtSctn div.CraftingHomes div.ProjectNoSctn div.Sctn div.SctnHldr {  
+            text-align: center;
+            padding: 10px;
+           
+        }
+    div.AbtSctn div.CraftingHomes div.ProjectNoSctn div.Sctn div.SctnHldr span.NumTxt {
+        font: normal normal 500 29px/44px Poppins;
+        letter-spacing: 0.38px;
+        display: block;
+        margin: 0;
+        color: #fff;
+    }
+    div.AbtSctn div.CraftingHomes div.ProjectNoSctn div.Sctn div.SctnHldr span.Txt {
+        font: normal normal normal 11px/20px Poppins;
+        letter-spacing: 0.49px;
+        color: #fff;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 0;
+    }
+
+div.AbtSctn div.CraftingHomes div.ProjectNoSctn div.Sctn div.SctnHldr:before {
+    content: url(./images/ProjectCountIcon.png); 
+    display: block;
+    text-align: center;
+
+}
+div.AbtSctn div.VisionMissionHldr {
+    background: url("./images/BlackBg.jpg") no-repeat center center;
+    background-size: cover;
+    height: 200px;
+    position: relative;
+    padding-top: 30px;
+}
+div.AbtSctn div.VisionMissionHldr div.VisionMission {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+    div.AbtSctn div.VisionMissionHldr div.VisionMission h3.Hdr {
+        font: normal normal 500 21px/24px Poppins;
+        letter-spacing: 0.27px;
+        color: #FFFFFF;
+        text-transform: capitalize;
+    }
+    div.AbtSctn div.VisionMissionHldr div.VisionMission span.Txt {
+        font: normal normal normal 14px/23px Poppins;
+        letter-spacing: 0.18px;
+        color: #FFFFFF;
+    }
+div.AbtSctn div.HighLightsHldr{
+    padding: 40px 0;
+}
+div.AbtSctn div.HighLightsHldr h2.Hdr {
+    font: normal normal 300 26px/24px Poppins;
+    letter-spacing: 0.34px;
+    text-transform: capitalize;
+}
+
+div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt {   
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding: 30px 10px;
+}
+    div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt.Lft, div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt.Mdl{
+        width: 30%;
+    }
+    div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt.Rgt {
+        padding: 30px 10px 30px 40px;
+        width: 40%;
+    }
+    div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt div.HightLightBox {
+        border: 1px solid#0771BE;
+        border-radius: 5px;
+        overflow: hidden;
+        height: 80px;
+        margin: 10px auto;
+    }
+    div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt h3.Hdr {
+        font: normal normal 500 16px/27px Poppins;
+        letter-spacing: 0.4px;
+        text-transform: capitalize;
+    }
+    div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt.Rgt img{
+        width: 100%;
+        height: 490px;
+        padding-top: 20px;
+        object-fit: cover;
+    }
+    /***************************First box css**********************/
+    div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt div.HightLightBox.First {
+        height: 173px;
+    }
+    div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt div.HightLightBox.First div.LeftBox, div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt div.HightLightBox.First div.RightBox {
+        height: 173px;
+    }
+    div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt div.HightLightBox.First div.LeftBox {
+        padding: 55px 10px 0 10px;
+    }
+    div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt div.HightLightBox.First div.RightBox {       
+        padding: 48px 10px 28px 10px;
+    }
+    div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt div.HightLightBox.First div.RightBox span.Txt {
+        padding: 10px 0 0 0;
+        font: normal normal normal 14px/21px Poppins;
+        letter-spacing: 0.18px;
+        display: block;
+    }
+    div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt div.HightLightBox.First div.RightBox span.ProjectName {
+        padding: 10px 0 0 0;
+        font: normal normal 500 18px/21px Poppins;
+        letter-spacing: 0.23px;
+        text-transform: uppercase;
+        display: block;
+    }
+    
+
+        /***************************First box css**********************/
+
+    div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt div.HightLightBox div.LeftBox, div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt div.HightLightBox div.RightBox {        
+        display: inline-block;
+        vertical-align: top;
+        box-sizing: border-box;
+    }
+    div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt div.HightLightBox div.LeftBox {
+        width: 20%;
+        display: inline-block;
+        vertical-align: middle;
+        background: #E5F4FF;            
+        border-right: 1px solid#0771BE;
+        text-align: center;
+        height: 80px;
+    }
+    div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt div.HightLightBox div.RightBox {
+        width: 80%;
+        background-color: #F8FCFF;
+        height: 80px;
+        padding: 28px 10px;
+    }                    
+    div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt div.HightLightBox div.LeftBox span.Txt {
+        padding-top: 28px;
+        display: block;
+    }
+        div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt div.HightLightBox div.RightBox span.ProjectName {
+            font: normal normal 500 16px/21px Poppins;
+            letter-spacing: 0.37px;
+        }
+        div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt div.HightLightBox div.RightBox div.RightBoxCntnt {
+            width: 31.33%;
+            display: inline-block;
+            vertical-align: top;
+            box-sizing: border-box;
+            text-align: center;
+        }
+    div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt div.HightLightBox div.RightBox div.RightBoxCntnt.Mdl {
+        border-left: 1px solid #90BFE3;
+        border-right: 1px solid #90BFE3;       
+    }
+    div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt div.HightLightBox div.RightBox div.RightBoxCntnt span.Txt {       
+        display: block;
+        font: normal normal normal 12px/10px Poppins;
+        letter-spacing: 0.28px;     
+    }
+    div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt div.HightLightBox div.RightBox div.RightBoxCntnt span.ProjectName {       
+        display: block;        
+        margin: 0;       
+    }
+    div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt div.HightLightBox div.RightBox.CntntBx {
+        padding: 26px 10px;
+    }
+    div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt div.HightLightBox div.RightBox.CntntBx span.Txt {
+        font: normal normal normal 12px/10px Poppins;
+        letter-spacing: 0.28px;
+        display: block;
+    }
+    div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt div.HightLightBox div.RightBox.CntntBx div.RightCntnt{            
+        display: inline-block;
+        vertical-align: top;
+        box-sizing: border-box;            
+    }
+    div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt div.HightLightBox div.RightBox.CntntBx div.RightCntnt.Lft {
+        width: 35%;
+    }
+    div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt div.HightLightBox div.RightBox.CntntBx div.RightCntnt.Rgt {
+        border-left: 1px solid #ddd;
+        padding-left: 15px;
+        width: 65%;
+    }
+    
+#ScrollBtn {
+    display: none;
+    position: fixed;
+    bottom: 24px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #0771BE;
+    cursor: pointer;
+    padding: 13px;
+    border-radius: 6px;
+    width: 30px;
+    height: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 1px solid #fff;
+}
+    #ScrollBtn:before {
+        content: url(./images/TopArrw.svg);
+        z-index: 9999;        
+    }
+
+    #ScrollBtn:hover {
+        background-color: #000;
+    }  
+
+
+    /*************************Sights List css**********************************************************/
+    @media only screen and (max-width: 767px) {
+        .SiteWidth {
+            width: 90%;
+            margin: 0 5%;
+        }
+
+        span.BnnrHdr {
+            font-size: 35px;
+            top: 30%;
+        }
+
+        div.GHeader {
+            height: 53px;
+            padding-top: 7px;
+        }
+
+            div.GHeader div.HeaderCntnt div.MenuSctnHldr {
+                width: 100%;
+                position: relative;
+            }
+
+            div.GHeader div.HeaderCntnt div.LogoHldr {
+                width: 90%;
+            }
+            div.GHeader div.HeaderCntnt div.LogoHldr img{
+                padding-top: 5px;
+            }
+            div.GHeader.Sticky div.HeaderCntnt div.LogoHldr img {
+                padding-top: 10px;
+            }
+            div.GHeader div.HeaderCntnt div.BttnHldr {
+                width: 35%;
+                padding-top: 10px;
+                vertical-align: middle;
+                text-align: left;
+            }
+
+            div.GHeader div.HeaderCntnt div.MenuSctnHldr {
+                width: 10%;
+            }
+
+            div.GHeader div.HeaderCntnt div.BttnHldr a.LnkBtn {
+                padding: 8px 15px;
+            }
+
+            div.GHeader div.HeaderCntnt.Web {
+                display: none;
+            }
+
+            div.GHeader div.HeaderCntnt.Mbl {
+                overflow: hidden;
+                position: relative;
+                display: block;
+                z-index: 999;
+            }            
+            div.GHeader div.HeaderCntnt ul.MenuLsts li a.Lnk {
+                display: block;
+                padding: 15px 25px;
+                font-size: 16px;
+                color: #fff;
+                text-transform: uppercase;
+                border-top: 1px solid rgba(109,109,109,0.3);
+            }            
+            div.GHeader div.HeaderCntnt ul.MenuLsts li:first-child a.Lnk, div.GHeader div.HeaderCntnt ul.MenuLsts li ul.SubMenuLsts li a.Lnk {
+                border-top: 0;
+            }
+            div.GHeader div.HeaderCntnt ul.MenuLsts li:last-child a.Lnk {
+                border-bottom: 1px solid rgba(109,109,109,0.3);
+            }
+            div.GHeader div.HeaderCntnt ul.MenuLsts li a.Lnk.Active {
+                color: #fff;
+                background-color: #0771BE !important;
+                border: 0;
+            }
+            div.GHeader div.HeaderCntnt ul.MenuLsts li ul.SubMenuLsts li a.Lnk.Active:before {
+                background-color: #FFF;               
+            }
+
+            div.GHeader div.HeaderCntnt ul.MenuLsts {
+                display: none;
+            }
+
+                div.GHeader div.HeaderCntnt ul.MenuLsts.Active {
+                    display: block;
+                }
+
+            div.GHeader div.HeaderCntnt ul.MenuLsts {
+                background-color: #0C2F52;
+                color: #fff;
+                margin: 8px 0px 0 0px;
+                z-index: 999;
+                height: 100vh;
+                padding-top: 40px;
+            }          
+
+            div.GHeader div.HeaderCntnt ul.MenuLsts li ul.SubMenuLsts {                
+                display: block;
+            }
+                div.GHeader div.HeaderCntnt ul.MenuLsts li ul.SubMenuLsts li a.Lnk {                 
+                    padding-left: 40px;
+                }
+
+                div.GHeader div.HeaderCntnt ul.MenuLsts li ul.SubMenuLsts li {
+                    list-style-type:none;
+                    color: #fff;
+                    position: relative;
+                }
+                div.GHeader div.HeaderCntnt ul.MenuLsts li ul.SubMenuLsts li a.Lnk:before{
+                    content: '';
+                    width: 8px;
+                    height: 2px;
+                    background-color: #fff;
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: 5px;
+                }
+
+            div.GHeader div.HeaderCntnt.Mbl div.MenuSctnHldr a.MenuIcon {
+                position: absolute;
+                right: 0;
+                top: 13px;
+                z-index: 9999;
+            }
+
+                div.GHeader div.HeaderCntnt.Mbl div.MenuSctnHldr a.MenuIcon:before {
+                    content: url(./images/MblMenu.svg);
+                }
+
+                div.GHeader div.HeaderCntnt.Mbl div.MenuSctnHldr a.MenuIcon.Active:before {
+                    content: url(./images/CancelIcon.svg);
+                    display: inline-block;
+                    z-index: 9999;
+                }
+                div.GHeader.Sticky div.HeaderCntnt.Mbl div.MenuSctnHldr a.MenuIcon:before {
+                    content: url(./images/MblMenuW.svg);
+                }
+
+                div.GHeader.Sticky div.HeaderCntnt.Mbl div.MenuSctnHldr a.MenuIcon.Active:before {
+                    content: url(./images/CancelIconW.svg);
+                    display: inline-block;
+                    z-index: 9999;
+                }
+        div.UpComingProjects div.SctnProjects div.ProjectInfo div.ProjectCntnt h2.Hdr{
+            font-size: 20px;
+        }
+        div.FloatingIconsHldr {           
+            right: 10px;
+        } 
+        div.OurProjects div.PrjctsSctn span.PrjctsHdrTtl, div.OurProjects div.PrjctsSctn span.PrjctsSubHdrTtl {
+            font-size: 22px;
+            padding-top: 0;
+            display: inline-block;
+        }
+        div.OtherProducts div.ProdctSctn h3.Hdr{
+            font-size: 12px;
+        }
+        div.OtherProducts div.ProdctSctn span.ProdctCompName, div.OtherProducts div.ProdctSctn span.ProdctSubHdr, div.AbtSctn div.CraftingHomes div.CraftHomesCntnt h1.Hdr {
+            font-size: 22px;
+        }
+        div.ExpInfo div.ExpSctn div.RgtExpSctn span.ExpSubHdr, div.ExpInfo div.ExpSctn div.RgtExpSctn span.ExpSubHdrBld {
+            padding-top: 0;
+            font-size: 19px;
+            line-height: 30px;
+        }
+        div.ExpInfo div.ExpSctn div.RgtExpSctn span.ExpSubHdr{
+            padding-top: 20px;
+        }
+        div.ExpInfo div.ExpSctn div.RgtExpSctn {
+            padding: 10px;
+        }
+        div.ExpInfo div.ExpSctn.Rgt{
+            padding: 20px 0;
+        }
+        div.ExpInfo div.ExpSctn div.LftExpSctn div.TotlExpSctn span.Date {
+            font-size: 56px;
+            padding: 10px 0;
+        }
+        div.ExpInfo div.ExpSctn div.LftExpSctn div.TotlExpSctn span.Years{
+            font-size: 26px;
+            padding: 10px 0 0 0;
+        }
+        div.ExpInfo div.ExpSctn div.LftExpSctn div.TotlExpSctn span.Expce{
+            font-size: 12px;
+            margin: 0;
+            line-height: 0;
+        }
+        div.ExpInfo div.ExpSctn div.LftExpSctn div.TotlExpSctn{
+            padding: 20px 0;
+        }
+        div.ExpInfo div.ExpSctn div.RgtExpSctn h3.Hdr{
+            font-size: 10px;
+            line-height: 0;
+            margin: 0;
+        }
+        div.TestimonialSctn div.TestimonialCntnt span.Txt, div.OtherProducts div.ProdctSctn span.ProdctCompName {
+            padding-top: 0;
+        }
+
+        div.TestimonialSctn div.TestimonialCntnt span.Txt {
+            width: 100%;
+        }
+
+        div.TestimonialSctn h3.Hdr {
+            font: normal normal 200 14px/38px Poppins;
+        }
+
+        div.AboutCompany div.SctnRight img {
+            height: auto;
+        }
+
+        div.AboutCompany h1.Hdr {
+            padding-bottom: 0;           
+        }
+        div.AboutCompany h1.Hdr, div.UpComingProjects h1.Hdr {
+            font-size: 22px;
+        }
+        div.AbtSctn div.AbtBnnrHldr, div.ContactUsSctn div.ContactBnnrHldr {
+            height: 160px;
+        }
+            div.AbtSctn div.AbtBnnrHldr div.AbtBnnrTtlSctn, div.ContactUsSctn div.ContactBnnrHldr div.ContactBnnrTtlSctn {
+                top: 20%;
+            }        
+
+        div.OurProjects div.PrjctsSctn h3.Hdr {
+            font-size: 12px;
+        }
+
+        div.OurProjects div.PrjctsSctn {
+            width: 100%;
+        }
+
+            div.OurProjects div.PrjctsSctn span.Txt {
+                padding-right: 0;
+            }
+
+            div.OurProjects div.PrjctsSctn div.BtnHldr {
+                padding: 20px 0;
+            }
+
+        div.ExpInfo div.ExpSctn.Lft, div.ExpInfo div.ExpSctn.Rgt, div.AboutCompany div.AbtSctnHldr div.AbtComSctn, div.UpComingProjects div.SctnProjects, div.AboutCompany div.AbtSctnHldr, div.AboutCompany div.SctnRight, div.OtherProducts div.ProdctSctn {
+            width: 100%;
+        }
+
+            div.AboutCompany div.SctnRight, div.AboutCompany div.AbtSctnHldr div.AbtComSctn {
+                padding: 20px 0;
+            }
+
+        div.AboutCompany div.SctnRight {
+            text-align: center;
+        }
+
+        div.UpComingProjects, div.OurProjects {
+            padding: 30px 0;
+        }
+
+        div.OurProjects div.PrjctsSctn span.PrjctsHdrTtl {
+            padding-top: 0;
+        }
+
+        div.UpComingProjects div.SctnProjects div.ProjectInfo {
+            padding: 20px 0;
+        }
+
+        div.TestimonialSctn div.TestimonialCntnt div.ProfileDtls {
+            padding-bottom: 0;
+        }
+        div.BrandHldr {
+            width: 96%;
+            margin: 0 auto 2% auto;      
+        }
+        div.BrandHldr div.BrandType a img {
+            width: 90%;
+        }
+        div.ExpInfo div.ExpSctn div.LftExpSctn div.TotlExpSctn {
+            max-width: 100%;
+            margin-right: 0;
+        }       
+
+        div.AboutDtlsHldr div.AboutDtls div.ImgHldr img {
+            width: 34px;
+        }
+
+        div.AboutDtlsHldr div.AboutDtls div.ImgHldr img.WorkForce {
+            width: 54px;
+        }
+
+        div.ProjectList div.ProjectListItems div.ProjectList.Lft, div.ProjectList div.ProjectListItems div.ProjectList.Rgt {
+            width: 100%;
+        }
+
+        div.ProjectList div.ProjectListItems div.ProjectList.Rgt {
+            padding-top: 10px;
+        }
+
+        div.SightLocListHldr div.SightLocList div.SightList {
+            width: 100%;
+            margin: 1% 0 20px 0;
+            padding: 40px;
+        }
+
+        div.SightLocListHldr div.SightLocList div.SightList.BtmAlgnCard, div.SightLocListHldr div.SightLocList div.SightList.TopAlgnCard {
+            margin-top: 0;
+        }
+
+        div.ProjectList div.ProjectListItems div.ProjectList.Lft img {
+            width: 100%;
+        }
+
+        div.SightLocListHldr div.SightLocList div.SightList.NoBg {
+            min-height: 100%;
+            padding: 20px 20px 20px 0;
+        }
+
+        div.ProjectList div.ProjectBnnrHldr span.BnnrTtl {
+            font-size: 26px;
+        }
+
+        div.ProjectList h4.Hdr {
+            font-size: 20px;
+        }
+
+        div.ProjectList div.ProjectListItems div.ProjectList.Rgt span.Ttl {
+            margin: 12px 0;
+        }
+
+        div.ProjectList div.ProjectListItems div.ProjectList.Rgt {
+            padding-left: 0;
+        }
+
+        div.OngoingProjects div.OngoingProjectsHldr div.OngoingCntntHldr, ul.IconsLstHldr li.Txt, div.OngoingProjects div.AmenitiesHldr ul.IconsLstHldr li.Txt {
+            width: 100%;
+        }
+            div.OngoingProjects div.AmenitiesHldr ul.IconsLstHldr li.Txt{
+                padding: 0;
+            }
+
+            div.OngoingProjects div.OngoingProjectsHldr div.OngoingCntntHldr.Lft {
+                padding-right: 0;
+            }
+
+            div.OngoingProjects div.OngoingProjectsHldr div.OngoingCntntHldr.Rgt {
+                padding: 10px;
+            }
+        div.OngoingProjects div.OngoingProjectsHldr div.OngoingCntnt{
+            padding: 30px 0;
+        }
+
+        div.OngoingProjects div.OngoingProjectsHldr div.TabsHldr button {
+            padding: 10px 20px;
+        }
+
+        div.OngoingProjects div.OptnsHldr div.Optns {
+            text-align: left;
+        }
+
+            div.OngoingProjects div.OptnsHldr div.Optns span.Txt.Availability {
+                padding-left: 15px;
+                box-sizing: border-box;
+            }
+
+        div.SaleSection div.SalesCntnt {
+            overflow-x: scroll;
+        }
+
+        div.OngoingProjects div.AmenitiesHldr ul.IconsLstHldr li.Txt, div.OngoingProjects div.ContactSection div.FormHldr {
+            width: 100%;
+        }
+
+        div.MapSection {
+            height: 100%;
+            background-position: left center;
+        }
+
+        div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt, div.AbtSctn div.CraftingHomes div.ProjectNoSctn {
+            width: 100%;
+        }
+        div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt{
+            padding: 0;
+        }
+        div.ModalContainer {
+            padding-top: 20px;            
+        }
+            div.ModalContainer div.ModalContent {
+                margin-bottom: 40px;
+            }
+        div.ContactForm{
+            padding: 0 25px 25px 25px;
+        }
+        div.ContactForm div.Hldr.Hlf {
+            width: 99%;
+        }
+        div.ContactForm div.BttnHldr input.Btn {
+            width: 100%;
+            margin: 10px 0;
+        }
+        div.ContactForm div.BttnHldr{
+            padding-left: 0;
+        }
+        div.AbtSctn div.HighLightsHldr h2.Hdr {
+            font: normal normal 300 24px/34px Poppins;
+            padding-top: 20px;
+        }
+
+        div.AbtSctn div.HighLightsHldr {
+            padding: 10px 0;
+        }
+
+        div.AbtSctn div.CraftingHomes div.ProjectNoSctn {
+            margin-bottom: 40px;
+        }
+
+        div.AbtSctn div.CraftingHomes div.CraftHomesCntnt {
+            padding: 40px 0;
+        }
+        div.AbtSctn div.CraftingHomes div.CraftHomesCntnt.Rgt{
+            padding-top: 0;
+        }
+        div.AbtSctn div.VisionMissionHldr{
+            height: auto;
+            padding: 30px 0;
+        }
+        div.AbtSctn div.VisionMissionHldr div.VisionMission{
+            width: 100%;
+            padding: 0;
+        }
+        div.AbtSctn div.VisionMissionHldr div.VisionMission h3.Hdr{
+            line-height: 10px;
+        }
+        div.AbtSctn div.VisionMissionHldr div.VisionMission.LftSctn {
+            padding-bottom: 20px;
+        }
+        div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt div.HightLightBox div.RightBox span.ProjectName {
+            font: normal normal 500 15px/21px Poppins;            
+        }
+        ul.IconsLstHldr.MapLst li span.Txt{
+            width: 85%;
+        }
+        ul.IconsLstHldr.MapLst li span.Icon{
+            width: 15%;
+        }
+        div.MapSection ul.IconsLstHldr.MapLst li{
+            padding: 5px 0;
+        }
+        /* footer css*/
+        div.GFooter div.GMdlFtr div.LftMdlFtr, div.GBttmFtr div.BttmSctn {
+            width: 100%;
+        }
+
+        div.GFooter div.GMdlFtr div.RgtMdlFtr {
+            display: none;
+        }
+
+        div.GFooter div.GMdlFtr div.LftMdlFtr, div.GBttmFtr div.BttmSctn, div.GBttmFtr div.BttmSctn.Rgt {
+            text-align: center;
+        }
+
+        div.GFooter div.GTopFtr span.FtrInnrTxt {
+            font-size: 14px;
+        }
+
+        div.GFooter div.GMdlFtr div.LftMdlFtr, div.GFooter div.GMdlFtr div.RgtMdlFtr {
+            padding: 30px 0;
+        }
+        #ScrollBtn {
+            display: none !important;
+        }
+        div.GFooter div.GTopFtr span.FtrInnrTxt.Mbl {
+            display: block;        
+        }
+        div.GFooter div.GTopFtr span.FtrInnrTxt.Web {
+            display: none;
+        }
+        div.GFooter div.GTopFtr span.FtrInnrTxt.Mbl span.Txt{
+            padding: 3px 0;
+        }
+        div.GBttmFtr div.BttmSctn span.FtrTxt, div.GBttmFtr div.BttmSctn a.Lnk{
+            font-size: 12px;
+        }
+        div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt div.HightLightBox.First {
+            height: 120px;
+        }
+        div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt div.HightLightBox.First div.LeftBox, div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt div.HightLightBox.First div.RightBox {
+            height: 120px;
+        }
+        div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt div.HightLightBox.First div.LeftBox{
+            padding-top: 20px;
+        }
+            div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt div.HightLightBox.First div.RightBox {
+                padding: 15px 10px 15px 10px;
+            }
+        div.ContactUsSctn div.ContactUsCntnt div.Form.LftSctn{
+            padding: 10px;
+        }
+    }
+
+    @media only screen and (max-width: 1023px) {
+        div.BrandHldr div.BrandType.One:hover div.BrandTypeCntnt.One, div.BrandHldr div.BrandType.Two:hover div.BrandTypeCntnt.Two, div.BrandHldr div.BrandType.Three:hover div.BrandTypeCntnt.Three {
+            display: none;
+        }
+
+        div.AboutDtlsHldr {
+            height: auto;
+            padding: 20px 0;
+        }
+        div.BrandHldr {
+            top: 50%;
+        }
+            div.BrandHldr div.BrandType {
+                padding: 10px;
+                height: auto;
+            }
+
+            div.AboutDtlsHldr div.AboutDtls span.HdrTxt {
+                font-size: 14px;
+            }
+
+            div.AboutDtlsHldr div.AboutDtls span.Txt {
+                font-size: 12px;
+            }
+
+            div.AboutDtlsHldr div.AboutDtls {
+                padding-top: 0;
+            }
+
+                div.AboutDtlsHldr div.AboutDtls span.HdrTxt {
+                    padding: 5px 0;
+                }
+
+        div.SightLocListHldr div.SightLocList div.SightList span.SightTypeTtl, div.SightLocListHldr div.SightLocList div.SightList span.SightTypeTtl span.BoldTtl {
+            display: inline-block;
+            font-size: 26px;
+        }
+
+        div.OngoingProjects div.OngoingProjectsHldr div.OngoingCntntHldr {
+            width: 100%;
+        }
+
+            div.OngoingProjects div.OngoingProjectsHldr div.OngoingCntntHldr.Rgt {
+                margin-bottom: 20px;
+                min-height: 100%;
+            }
+
+            div.OngoingProjects div.OngoingProjectsHldr div.OngoingCntntHldr.Lft {
+                padding-right: 0;
+            }
+
+        div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt.Lft, div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt.Mdl, div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt.Rgt, div.AbtSctn div.CraftingHomes div.CraftHomesCntnt img, div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt.Rgt img, div.AbtSctn div.CraftingHomes div.CraftHomesCntnt, div.AbtSctn div.CraftingHomes div.ProjectNoSctn {
+            width: 100%;
+        }
+
+            div.AbtSctn div.CraftingHomes div.CraftHomesCntnt.Lft {
+                padding-right: 0;
+            }
+
+            div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt.Rgt img {
+                height: auto;
+            }
+
+        div.AbtSctn div.HighLightsHldr div.HightLightsCntntHldr div.HightLightsCntnt.Rgt {
+            padding: 0;
+        }
+
+        div.AbtSctn {
+            padding: 0 0 30px 0;
+        }
+        #ScrollBtn {
+            width: 98%;
+            left: 1%;
+            right: 1%;
+            margin: 0 auto;
+            padding: 15px 0;
+        }
+        div.ModalContainer div.ModalContent {
+            width: 90%;
+        }
+        div.ContactUsSctn div.Form {
+            width: 100%;
+        }  
+        div.ContactUsSctn div.Form.RgtSctn iframe {
+            width: 100%;
+            height: 400px;
+        }        
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        h3.Hdr {
+            line-height: 0;
+        }
+        div.GHeader div.HeaderCntnt div.LogoHldr img {
+            padding-top: 15px;
+            width: 80%;
+        }
+        div.GHeader div.HeaderCntnt div.LogoHldr{
+            width: 17%;
+        }
+        div.GHeader div.HeaderCntnt div.MenuSctnHldr {
+            width: 67%;
+        }
+        div.GHeader div.HeaderCntnt div.BttnHldr{
+            width: 16%;
+        }
+        div.GHeader div.HeaderCntnt div.MenuSctnHldr ul.MenuLsts li {
+            margin: 15px 5px 15px 5px;
+        }
+        div.ExpInfo div.ExpSctn.Rgt {
+            padding-top: 30px;
+        }
+        div.ExpInfo div.ExpSctn.Lft, div.ExpInfo div.ExpSctn.Rgt {
+            width: 100%;
+        }
+        div.AboutCompany div.SctnRight img {
+            padding-top: 20px;
+            display: inline-block;
+        }
+        div.OurProjects div.PrjctsSctn span.Txt {
+            padding-right: 30px;
+        }
+        div.OurProjects div.PrjctsSctn div.BtnHldr {
+            padding: 20px 0;
+        }
+        span.BnnrHdr {
+            top: 15%;
+            font-size: 60px;
+        }
+        div.OurProjects div.PrjctsSctn.LftSctn {
+            padding-right: 20px;
+            box-sizing: border-box;
+        }
+        div.TestimonialSctn div.TestimonialCntnt span.Txt {
+            width: 80%;
+            margin: 0 auto;
+        }
+        div.SightLocListHldr div.SightLocList div.SightList {
+            width: 48%;
+            margin: 1%;
+        }
+        div.SightLocListHldr div.SightLocList div.SightList.BtmAlgnCard, div.SightLocListHldr div.SightLocList div.SightList.TopAlgnCard {
+            margin-top: 0.5%;
+        }
+        div.SightLocListHldr div.SightLocList div.SightList.NoBg {
+            padding: 0 60px 60px 0;
+        }
+        div.OngoingProjects div.AmenitiesHldr ul.IconsLstHldr li.Txt, div.OngoingProjects div.ContactSection div.FormHldr {
+            width: 50%;
+        }
+        div.OngoingProjects div.OngoingProjectsHldr div.OngoingCntntHldr.Rgt {
+            margin-bottom: 10px;
+        }
+        div.UpComingProjects div.SctnProjects div.ProjectInfo div.ProjectCntnt{
+            min-height: 162px;
+        }
+        ul.IconsLstHldr.MapLst li span.Txt {
+            width: 92%;
+        }
+
+        ul.IconsLstHldr.MapLst li span.Icon {
+            width: 8%;
+        }
+    }
+
+@media only screen and (min-width: 1024px) and (max-width: 1300px){
+    div.BrandHldr {
+        top: 70%;
+    }
+    #ScrollBtn {
+        bottom: 10px;
+    }
+    div.FloatingIconsHldr{
+        bottom: 11%;
+    }
+
+}
+@media only screen and (max-width: 375px){    
+    div.OngoingProjects div.OngoingProjectsHldr div.TabsHldr button {
+        padding: 10px 15px;
+    }
+}
